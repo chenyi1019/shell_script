@@ -9,3 +9,11 @@ DIR=/tmp/test
 #     exit 
 # fi
 
+FILES=$1
+if [ ! -f $FILES ]; then
+    mkdir -p $FILES
+    echo "The $FILES create success"
+else
+    echo "The $FILES is exist"
+    exit
+fi
